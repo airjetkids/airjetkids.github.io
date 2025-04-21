@@ -263,7 +263,22 @@ body {
     }
 
     .showcase-item {
-        padding: 15px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .showcase-item .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Özel görüntü düzeltmeleri */
+    .showcase-item .image-container img[src="assets/foto4.png"],
+    .showcase-item .image-container img[src="assets/bulmaca1.png"] {
+        width: 100%;
+        height: auto;
+        min-height: 250px; /* Minimum yükseklik */
+        object-fit: contain; /* Görüntüyü orantılı şekilde sığdır */
     }
 
     .showcase-item .side-by-side-images {
@@ -608,4 +623,50 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Presentation Section Styles */
+.presentation {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.presentation-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    min-height: 600px;
+}
+
+.presentation-wrapper embed {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 5px;
+}
+
+.presentation-description {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .presentation-wrapper {
+        min-height: 400px;
+    }
+    
+    .presentation-wrapper embed {
+        height: 400px;
+    }
 } 
